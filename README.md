@@ -14,6 +14,12 @@ go run ./server
 go run ./client
 ```
 
+### Note
+For linux, `libasound2-dev` is needed for the beep sounds, you can install it by running the following:
+```bash
+sudo apt install libasound2-dev
+```
+
 ## Testing
 
 Run tests:
@@ -37,4 +43,4 @@ The ECG Monitoring Tool simulates different heart conditions:
 
 The simulation automatically cycles through these conditions to demonstrate the monitoring system's detection capabilities. Heart rates and RR intervals are generated based on the simulated condition, with appropriate randomization to create realistic variations.
 
-The server sends readings to the client via WebSocket, where they are analyzed and displayed. Alerts are generated for abnormal conditions and logged to separate files. 
+The server sends readings to the client via WebSocket, where they are analyzed and displayed. Alerts are generated for abnormal conditions and logged to separate files in `server/logs/`. 
